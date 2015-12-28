@@ -3,7 +3,6 @@
 @josefinsans: "Josefin Sans", sans-serif;
 
 @max-height: 100vh;
-@import  url("responsive");
 
 html{
     color: #fafafa;
@@ -52,9 +51,11 @@ h2{
     }
 }
 .slider{
-    height: 100vh;
-    min-height: 150px;
+    max-height: 100vh;
     width: 100%;
+    .item{
+        max-height: 100vh;
+    }
     h1{
         font-size: 60px;
         color: #FFFFFF;
@@ -82,7 +83,7 @@ h2{
                 background-color: #DE5E60;
             }
         }
-        a{
+        ol{
             line-height: 5px;
             li{
             text-decoration: none;
@@ -93,6 +94,9 @@ h2{
             background-color: #6e7074;
             margin: 0px 6px;
             margin-top: 19px;
+            &.active{
+                background-color: #fafafa;
+            }
             &:hover,
             &:focus,
             &:active{
@@ -109,6 +113,49 @@ a:-webkit-any-link {
     cursor: auto;
 }
 
+
+.carousel-control {
+    // position: relative;
+    opacity: 1;
+    max-width: 50px;
+    display: inline-block;
+    &.right{
+        left: 50px;
+    }
+}
+.slider .sliderbottom a {
+    background: none;
+}
+
+.carousel-indicators{
+    line-height: 5px;
+    bottom: 10px;
+    li{
+        text-decoration: none;
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+        border-radius: 100%;
+        background-color: #6e7074;
+        margin: 0px 6px;
+        margin-top: 19px;
+        &.active{
+            text-decoration: none;
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            border-radius: 100%;
+            background-color: #fff;
+            margin: 0px 6px;
+            margin-top: 19px;
+        }
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: #fafafa;
+        }
+    }
+}
 
 header{
     height: 60px;
